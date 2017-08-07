@@ -19,7 +19,10 @@ func main() {
     }
 
     s := string(file)
-    n := strings.Count(s, "\n") + 1
+    n := strings.Count(s, "\n")
+    if file[len(file) - 1] != '\n' {
+    	n++
+    }
     
     fmt.Println(n)
 }
